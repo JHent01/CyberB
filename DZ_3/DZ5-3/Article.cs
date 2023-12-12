@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DZ3_3
+namespace DZ5_3
 {
     internal class Article
     {

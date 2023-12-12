@@ -1,7 +1,7 @@
 ﻿
 
 
-using DZ3_3;
+using DZ5_3;
 
 Store shop = new Store();
 Article prod = new Article("qq","shop",11);
