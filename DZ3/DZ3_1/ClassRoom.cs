@@ -6,46 +6,31 @@ using System.Threading.Tasks;
 
 namespace DZ3_1
 {
-    internal class ClassRoom
+     class ClassRoom
     {
-        Pupil[] pupil;
+        private Pupil[] pupils;
 
-        public ClassRoom(Pupil p1, Pupil p2, Pupil p3, Pupil p4)
+        public ClassRoom(Pupil pupil1, Pupil pupil2, Pupil pupil3, Pupil pupil4)
         {
-            pupil = new Pupil[] { p1, p2, p3, p4 };
-        }
-        public ClassRoom(Pupil p1, Pupil p2, Pupil p3)
-        {
-            pupil = new Pupil[] { p1, p2, p3 };
-        }
-        public ClassRoom(Pupil p1, Pupil p2)
-        {
-            pupil = new Pupil[] { p1, p2 };
+            pupils = new Pupil[] { pupil1, pupil2, pupil3, pupil4 };
         }
 
-        public void PrintInfoStudy()
+        public ClassRoom(Pupil pupil1, Pupil pupil2, Pupil pupil3)
         {
-            Console.WriteLine("Study: ");
-            foreach (Pupil item in pupil)
-                item.Study();
+            pupils = new Pupil[] { pupil1, pupil2, pupil3 };
         }
-        public void PrintInfoRead()
+
+        public void ShowInfo()
         {
-            Console.WriteLine("Read: ");
-            foreach (Pupil item in pupil)
-                item.Read();
-        }
-        public void PrintInfoWrite()
-        {
-            Console.WriteLine("Write: ");
-            foreach (Pupil item in pupil)
-                item.Write();
-        }
-        public void PrintInfoRelax()
-        {
-            Console.WriteLine("Relax: ");
-            foreach (Pupil item in pupil)
-                item.Relax();
+            Console.WriteLine("Classroom info:");
+            for (int i = 0; i < pupils.Length; i++)
+            {
+                Console.WriteLine($"Pupil {i + 1}:");             
+                pupils[i].Study();              
+                pupils[i].Read();               
+                pupils[i].Write();               
+                pupils[i].Relax();               
+            }
         }
     }
 }

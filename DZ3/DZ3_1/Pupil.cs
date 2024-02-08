@@ -6,84 +6,99 @@ using System.Threading.Tasks;
 
 namespace DZ3_1
 {
-    internal class Pupil
+     class Pupil
     {
-        //public string study = "No info";
-        //public string read = "No info";
-        //public string write = "No info";
-        //public string relax = "No info";
-        virtual public void Study()
+        public virtual void Study()
         {
+            Console.WriteLine("Pupil is studying");
+        }
+
+        public virtual void Read()
+        {
+            Console.WriteLine("Pupil is reading");
+        }
+
+        public virtual void Write()
+        {
+            Console.WriteLine("Pupil is writing");
+        }
+
+        public virtual void Relax()
+        {
+            Console.WriteLine("Pupil is relaxing");
+        }
+
+       public class ExcellentPupil : Pupil
+        {
+            public override void Study()
+            {
+                Console.WriteLine(" Pupil excellent studying");
+            }
+
+            public override void Read()
+            {
+                Console.WriteLine(" Pupil excellent reading");
+            }
+
+            public override void Write()
+            {
+                Console.WriteLine(" Pupil excellent writing");
+            }
+
+            public override void Relax()
+            {
+                Console.WriteLine(" Pupil excellent relaxing");
+            }
+        }
+
+        public class GoodPupil : Pupil
+        {
+            public override void Study()
+            {
+                Console.WriteLine(" Pupil good studying");
+            }
+
+            public override void Read()
+            {
+                Console.WriteLine(" Pupil good  reading");
+            }
+
+            public override void Write()
+            {
+                Console.WriteLine(" Pupil good  writing");
+            }
+
+            public override void Relax()
+            {
+                Console.WriteLine(" Pupil good  relaxing");
+            }
+        }
+
+        public class BadPupil : Pupil
+        {
+            public override void Study()
+            {
+                Console.WriteLine(" Pupil bad studying");
+            }
+
+            public override void Read()
+            {
+                Console.WriteLine(" Pupil bad is reading");
+            }
+
+            public override void Write()
+            {
+                Console.WriteLine(" Pupil bad is writing");
+            }
+
+            public override void Relax()
+            {
+                Console.WriteLine(" Pupil bad is relaxing");
+            }
+        }
+
             
-        }
-        virtual public void Read() 
-        {
-             
-        }
-        virtual public void Write()
-        {
-             
-        }
-        virtual public void Relax()
-        {
-           
-        }
-    }
-    internal class ExcelentPupil: Pupil
-    {
-        public override void Study()
-        {
-            Console.WriteLine("Excelent Pupil Study");
-        }
-        public override void Read()
-        {
-            Console.WriteLine("Excelent Pupil Read");
-        }
-        public override void Write()
-        {
-            Console.WriteLine("Excelent Pupil Write");
-        }
-        public override void Relax()
-        {
-            Console.WriteLine("Excelent Pupil Relax");
-        }
-    }
-    internal class GoodPupil: Pupil
-    {
-        public override void Study()
-        {
-            Console.WriteLine("Good Pupil Study");
-        }
-        public override void Read()
-        {
-            Console.WriteLine("Good Pupil Read");
-        }
-        public override void Write()
-        {
-            Console.WriteLine("Good Pupil Write");
-        }
-        public override void Relax()
-        {
-            Console.WriteLine("Good Pupil Relax");
-        }
-    }
-    internal class BadPupil : Pupil
-    {
-        public override void Study()
-        {
-            Console.WriteLine("Bad Pupil Study");
-        }
-        public override void Read(      )
-        {
-            Console.WriteLine("Bad Pupil Read");
-        }
-        public override void Write()
-        {
-            Console.WriteLine("Bad Pupil Write");
-        }
-        public override void Relax()
-        {
-            Console.WriteLine("Bad Pupil Relax");
-        }
+
+
     }
 }

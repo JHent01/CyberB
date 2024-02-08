@@ -1,22 +1,24 @@
 ﻿using DZ3_1;
+using static DZ3_1.Pupil;
 
-//ClassRoom classRoom = new ClassRoom(new Pupil(), new Pupil(), new Pupil(), new Pupil());
-//Console.WriteLine(classRoom);
-//Console.WriteLine(classRoom.ToString);
-//ExcelentPupil excelentPupil = new ExcelentPupil();
-//GoodPupil good = new GoodPupil();
-//BadPupil bad = new BadPupil();
-//excelentPupil.Relax();
-//good.Study();
-//bad.Read();
-//excelentPupil.Write();
-//Console.WriteLine(classRoom.ToString);
+namespace DZ3_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Pupil pupil1 = new ExcellentPupil();
+            Pupil pupil2 = new GoodPupil();
+            Pupil pupil3 = new BadPupil();
+            Pupil pupil4 = new ExcellentPupil();
+         
+            ClassRoom classroom = new ClassRoom(pupil1, pupil2, pupil3, pupil4);
 
-ClassRoom cRoom = new ClassRoom(new ExcelentPupil(), new GoodPupil(), new BadPupil(), new GoodPupil());
+            classroom.ShowInfo();
 
-cRoom.PrintInfoRead();
-cRoom.PrintInfoRelax();
-cRoom.PrintInfoStudy();
-cRoom.PrintInfoWrite();
+            Console.ReadKey();
+        }
+    }
+}
 
-Console.ReadKey();
